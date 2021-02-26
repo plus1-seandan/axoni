@@ -18,7 +18,6 @@ export default function SelectionPage() {
   if (!tags) {
     return <div>...loading</div>;
   }
-  console.log({ tags });
   return (
     <div>
       {tags.map((tag) => {

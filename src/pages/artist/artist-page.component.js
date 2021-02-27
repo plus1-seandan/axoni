@@ -80,7 +80,7 @@ function ArtistPage() {
       <div className="artist-page-body2">
         <h2 className="artist-page-body2-title">ALBUMS</h2>
         <div className="artist-page-body2-albums">
-          {albums?.map((album) => {
+          {albums?.map((album, idx) => {
             return (
               <Link
                 to={{
@@ -88,7 +88,9 @@ function ArtistPage() {
                   state: { artist: info.name },
                 }}
               >
-                <div className="artist-page-body2-album">{album.name}</div>
+                <div className="artist-page-body2-album">
+                  {idx + 1}. {album.name}
+                </div>
               </Link>
             );
           })}

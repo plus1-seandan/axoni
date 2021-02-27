@@ -1,0 +1,40 @@
+.album-page {
+  display: flex;
+  flex-direction: column;
+
+  .album-page-header {
+    display: flex;
+    justify-content: space-around;
+    min-height: 30rem;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1501612780327-45045538702b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+      color: white;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .album-page-header-artist {
+      color: white;
+      font-size: 1.5rem;
+    }
+    p {
+      margin-top: 25px;
+      font-size: 1.2rem;
+      color: white;
+    }
+  }
+  .album-page-tracks {
+    .album-page-tracks-header {
+      margin: 1rem;
+      color: red;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+  }
+
+  .album-page-tags {
+    margin: 1rem;
+  }
+}

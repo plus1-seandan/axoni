@@ -77,7 +77,12 @@ function ArtistPage() {
         <div className="artist-page-body2-albums">
           {albums?.map((album) => {
             return (
-              <Link>
+              <Link
+                to={{
+                  pathname: `/albums/${album.name}`,
+                  state: { artist: info.name },
+                }}
+              >
                 <div className="artist-page-body2-album">{album.name}</div>
               </Link>
             );

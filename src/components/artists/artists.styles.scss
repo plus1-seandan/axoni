@@ -15,10 +15,6 @@
     padding-top: 2rem;
   }
 }
-// .tag-artist:hover {
-//   background-color: grey;
-//   color: white;
-// }
 
 .tag-artist {
   flex-grow: 1;
@@ -41,6 +37,10 @@
   p {
     padding-top: 15px;
   }
+}
+
+.tag-artist:hover {
+  opacity: 0.8;
 }
 
 .tags-not-selected {

@@ -1,6 +1,7 @@
 import axios from "axios";
 
 import {
+  lastFmAlbumInfo,
   lastFmArtistInfo,
   lastFmArtistListeners,
   lastFmArtists,
@@ -35,4 +36,9 @@ export const getArtistInfo = async (id) => {
 export const getArtistTopAlbums = async (id) => {
   const { data } = await axios.get(lastFmArtistTopAlbums(id));
   return data.topalbums;
+};
+
+export const getAlbumInfo = async (artist, album) => {
+  const { data } = await axios.get(lastFmAlbumInfo(artist, album));
+  return data.album;
 };

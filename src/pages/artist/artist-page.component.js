@@ -3,7 +3,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
 
-import { Artist } from "../../components/tags/tags.component";
+import { Artist } from "../../components/artists/artists.component";
 import { lastFmArtistInfoByName } from "../../config/lastFmRoutes";
 
 import { getArtistInfo, getArtistTopAlbums } from "../../utils/artists";
@@ -48,9 +48,11 @@ function ArtistPage() {
       </div>
       <div className="artist-page-body1">
         <div className="artist-page-body1-summary-tags">
-          <button className="artist-page-body1-goback-btn">
-            Back to Genres
-          </button>
+          <Link to="/">
+            <button className="artist-page-body1-goback-btn">
+              Back to Genres
+            </button>
+          </Link>
 
           <div className="artist-page-body1-summary">
             <p>{info.bio.summary}</p>
@@ -66,7 +68,6 @@ function ArtistPage() {
         <div className="artist-page-body1-similar-artists">
           <h2>Similar To</h2>
           {similarArtists.map((a) => {
-            console.log({ a });
             return <SimilarArtist artist={a} />;
           })}
         </div>

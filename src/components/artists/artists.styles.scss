@@ -1,0 +1,75 @@
+.tags {
+  .tags-title {
+    text-align: center;
+    font-size: 3rem;
+    color: red;
+    font-weight: bold;
+  }
+}
+
+.tag-artists {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  p {
+    padding-top: 2rem;
+  }
+}
+// .tag-artist:hover {
+//   background-color: grey;
+//   color: white;
+// }
+
+.tag-artist {
+  flex-grow: 1;
+  width: 30%;
+  height: 15rem;
+  margin: 1rem;
+  background-image: url("https://images.unsplash.com/photo-1525362081669-2b476bb628c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 3px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  p {
+    padding-top: 15px;
+  }
+}
+
+.tags-not-selected {
+  display: flex;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.tags-not-selected {
+  display: flex;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.tags-loading {
+  display: flex;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  span {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+}

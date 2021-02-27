@@ -8,7 +8,7 @@ import {
 } from "../config/lastFmRoutes";
 
 export const getTagArtists = async (tag) => {
-  let { data } = await axios.get(lastFmArtists(tag.name));
+  let { data } = await axios.get(lastFmArtists(tag));
   const _artists = data.topartists.artist;
 
   let artists = [];

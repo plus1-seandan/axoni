@@ -1,4 +1,25 @@
 .tags-page {
   display: flex;
   height: 100%;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  .tags-page-title {
+    padding: 2rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    background-image: url("https://images.unsplash.com/photo-1501612780327-45045538702b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+  }
+  .tags-page-dropdown {
+    padding: 2rem;
+    width: 50%;
+  }
 }

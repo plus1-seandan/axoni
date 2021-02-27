@@ -1,13 +1,15 @@
 import { Switch, Route, Redirect } from "react-router-dom";
 import React from "react";
-import SelectionPage from "./pages/SelectionPage";
+import TagsPage from "./pages/tags/tags-page.component";
+import ArtistPage from "./pages/ArtistPage";
 
 class Routes extends React.Component {
   render() {
     return (
       <div>
         <Switch>
-          <Route exact path="/" component={SelectionPage} />
+          <Route exact path="/" component={TagsPage} />
+          <Route exact path="/artists/:mbid" component={ArtistPage} />
         </Switch>
       </div>
     );

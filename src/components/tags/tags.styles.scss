@@ -1,0 +1,12 @@
+.tags {
+  .tags-title {
+    text-align: center;
+    font-size: 3rem;
+    color: red;
+    font-weight: bold;
+  }
+  .tags-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

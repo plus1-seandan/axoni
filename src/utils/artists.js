@@ -1,8 +1,13 @@
 import axios from "axios";
 
-import { lastFmArtistListeners, lastFmArtists } from "../config/lastFmRoutes";
+import {
+  lastFmArtistInfo,
+  lastFmArtistListeners,
+  lastFmArtists,
+  lastFmArtistTopAlbums,
+} from "../config/lastFmRoutes";
 
-const getTagArtists = async (tag) => {
+export const getTagArtists = async (tag) => {
   let { data } = await axios.get(lastFmArtists(tag.name));
   const _artists = data.topartists.artist;
 
@@ -22,4 +27,12 @@ const getTagArtists = async (tag) => {
   return artists;
 };
 
-export default getTagArtists;
+export const getArtistInfo = async (id) => {
+  const { data } = await axios.get(lastFmArtistInfo(id));
+  return data.artist;
+};
+
+export const getArtistTopAlbums = async (id) => {
+  const { data } = await axios.get(lastFmArtistTopAlbums(id));
+  return data.topalbums;
+};

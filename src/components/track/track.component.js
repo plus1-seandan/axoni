@@ -5,7 +5,7 @@ import "./track.styles.scss";
 
 const Track = ({ track, idx, maxPlays }) => {
   const convertWidth = () => {
-    let widthFloat = (track.playcount / maxPlays) * 100;
+    let widthFloat = (track?.playcount / maxPlays) * 100;
     let width = widthFloat.toString();
     return width + "%";
   };

@@ -37,7 +37,7 @@ function AlbumPage() {
     let maxPlays = 0;
 
     tracks.forEach((track) => {
-      maxPlays = Math.max(maxPlays, parseInt(track.track.playcount));
+      maxPlays = Math.max(maxPlays, parseInt(track.track?.playcount));
     });
     return maxPlays;
   };

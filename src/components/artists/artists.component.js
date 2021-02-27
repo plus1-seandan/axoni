@@ -19,7 +19,6 @@ export default function Artists({ tag }) {
       setLoading(true);
       const artists = await getTagArtists(tag);
       setArtists(artists);
-      console.log({ artists });
       setLoading(false);
     };
     asyncFetch();

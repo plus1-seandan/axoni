@@ -15,6 +15,9 @@ export const getTagArtists = async (tag) => {
   let artists = [];
   for (let i = 0; i < 50; i++) {
     let { data } = await axios.get(lastFmArtistListeners(_artists[i]));
+    if (!data || !data.toptracks) {
+      break;
+    }
     const tracks = data.toptracks.track;
     const listeners = tracks.reduce((tot, curr) => {
       tot += parseInt(curr.listeners);

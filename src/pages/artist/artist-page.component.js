@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Button, Spinner } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
@@ -36,7 +36,12 @@ function ArtistPage() {
   }, [mbid]);
 
   if (!info) {
-    return <div>...loading</div>;
+    return (
+      <div className="tags-loading">
+        <Spinner size="xl" />
+        <span>...Loading</span>
+      </div>
+    );
   }
   const similarArtists = info.similar.artist.slice(0, 3);
 

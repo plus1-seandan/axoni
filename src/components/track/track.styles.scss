@@ -1,33 +1,37 @@
 .track {
-  display: flex;
-  margin: 1rem;
-  align-items: center;
   border-bottom: 1px solid;
-  padding: 5px;
-  width: 80%;
-  position: relative;
-  min-height: 5rem;
 
-  .track-number {
-    font-size: 1.3rem;
-    font-weight: bold;
-  }
-  .track-actions {
-    margin: 0 10px;
-  }
-  .track-album-image-container {
-    border: 1px solid;
-  }
+  .track-line1 {
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+    min-height: 5rem;
+    .track-number {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    .track-actions {
+      margin: 0 10px;
+    }
+    .track-album-image-container {
+      border: 1px solid;
+    }
 
-  .track-title {
-    font-size: 1.5rem;
-    margin-left: 2rem;
-    font-weight: bold;
+    .track-title {
+      font-size: 1.5rem;
+      margin-left: 2rem;
+      font-weight: bold;
+    }
   }
-
-  .track-playcount {
-    position: absolute;
-    padding: 1rem;
-    right: 0;
+  .track-line2 {
+    .track-playcount {
+      display: flex;
+      padding: 1rem;
+      margin: 1rem;
+      background-color: #ffb6c1;
+      box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+    }
   }
 }

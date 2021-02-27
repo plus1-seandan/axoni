@@ -12,6 +12,7 @@ class Routes extends React.Component {
           <Route exact path="/" component={TagsPage} />
           <Route exact path="/artists/:mbid" component={ArtistPage} />
           <Route exact path="/albums/:name" component={AlbumPage} />
+          <Redirect to="/" />
         </Switch>
       </div>
     );

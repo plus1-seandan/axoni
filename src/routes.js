@@ -1,7 +1,7 @@
 import { Switch, Route, Redirect } from "react-router-dom";
 import React from "react";
 import TagsPage from "./pages/tags/tags-page.component";
-import ArtistPage from "./pages/ArtistPage";
+import ArtistPage from "./pages/artist/artist-page.component";
 
 class Routes extends React.Component {
   render() {

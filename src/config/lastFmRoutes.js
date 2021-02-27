@@ -17,3 +17,7 @@ export const lastFmArtistInfo = (mbid) => {
 export const lastFmArtistTopAlbums = (mbid) => {
   return `http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&mbid=${mbid}&api_key=${process.env.REACT_APP_API_KEY}&format=json`;
 };
+
+export const lastFmArtistInfoByName = (name) => {
+  return `http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${name}&api_key=${process.env.REACT_APP_API_KEY}&format=json`;
+};

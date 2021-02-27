@@ -1,0 +1,82 @@
+.artist-page {
+  display: flex;
+  flex-direction: column;
+
+  .artist-page-header {
+    display: flex;
+    justify-content: space-around;
+    min-height: 30rem;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1501612780327-45045538702b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+      color: white;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  }
+
+  .artist-page-body1 {
+    display: flex;
+
+    .artist-page-body1-summary-tags {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem;
+
+      .artist-page-body1-goback-btn {
+        align-self: flex-start;
+        margin: 1rem;
+        background-color: red;
+        padding: 1rem;
+        color: white;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .artist-page-body1-tags {
+        margin-top: 1rem;
+        display: flex;
+      }
+    }
+
+    .artist-page-body1-similar-artists {
+      margin-left: 1rem;
+
+      width: 100%;
+      h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      margin: 1rem;
+    }
+  }
+
+  .artist-page-body2 {
+    margin: 1rem;
+    .artist-page-body2-title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .artist-page-body2-album {
+      width: 30rem;
+      padding: 1rem;
+      margin-top: 1rem;
+      background-color: grey;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .artist-page-body2-album:hover {
+      background-color: red;
+    }
+  }
+}
+
+.similar-artist {
+  margin: 1.5rem 0;
+  img {
+    border-radius: 50%;
+  }
+}

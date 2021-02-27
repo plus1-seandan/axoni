@@ -10,6 +10,7 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
+  Heading,
 } from "@chakra-ui/react";
 import axios from "axios";
 
@@ -24,6 +25,7 @@ export default function Tags() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [artists, setArtists] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [selectedTag, setSelectedTag] = useState();
 
   useEffect(() => {
     const asyncFetch = async () => {
@@ -35,6 +37,7 @@ export default function Tags() {
 
   const handleClick = async (tag) => {
     onOpen();
+    setSelectedTag(tag);
     setLoading(true);
     const artists = await getTagArtists(tag);
     setArtists(artists);
@@ -56,27 +59,47 @@ export default function Tags() {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          {/* <ModalHeader>{selectedTag?.name.toUpperCase()}</ModalHeader> */}
           <ModalCloseButton />
-          <ModalBody>
-            {loading ? (
-              <p>...loading</p>
-            ) : (
-              artists.map((a) => (
-                <Link to={`/artists/${a.mbid}`}>
-                  {a.name} {a.listeners}
-                </Link>
-              ))
-            )}
+          <ModalBody display="flex" flexDirection="column">
+            <Heading color="tomato">
+              Top Artists for {selectedTag?.name.toUpperCase()}
+            </Heading>
+            <Artists loading={loading} artists={artists} />
           </ModalBody>
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button variant="ghost">Secondary Action</Button>
+            {/* <Button variant="ghost">Secondary Action</Button> */}
           </ModalFooter>
         </ModalContent>
       </Modal>
     </div>
   );
 }
+
+export const Artists = ({ loading, artists }) => {
+  return (
+    <div className="tag-modal-artists">
+      {loading ? (
+        <p>...loading. Please wait</p>
+      ) : (
+        artists.map((a, idx) => <Artist num={idx + 1} artist={a} />)
+      )}
+    </div>
+  );
+};
+
+export const Artist = ({ artist, num }) => {
+  return (
+    <div className="tag-modal-artist">
+      <Link to={`/artists/${artist.mbid}`}>
+        <h2>
+          {num}. {artist.name}
+        </h2>
+        <p>Total Listeners: {artist.listeners}</p>
+      </Link>
+    </div>
+  );
+};
